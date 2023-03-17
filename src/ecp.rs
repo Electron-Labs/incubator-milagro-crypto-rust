@@ -28,7 +28,9 @@ use std::str::SplitWhitespace;
 pub use super::rom::{AESKEY, CURVETYPE, CURVE_PAIRING_TYPE, HASH_TYPE, SEXTIC_TWIST, SIGN_OF_X};
 pub use crate::types::CurveType;
 
-#[derive(Clone)]
+use borsh::{BorshDeserialize, BorshSerialize};
+
+#[derive(BorshDeserialize, BorshSerialize, Clone)]
 pub struct ECP {
     x: FP,
     y: FP,

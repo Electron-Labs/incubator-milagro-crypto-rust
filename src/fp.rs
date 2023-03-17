@@ -26,7 +26,9 @@ use super::rom;
 use crate::arch::{self, Chunk};
 use crate::types::ModType;
 
-#[derive(Clone)]
+use borsh::{BorshDeserialize, BorshSerialize};
+
+#[derive(BorshDeserialize, BorshSerialize, Clone)]
 pub struct FP {
     pub x: Big,
     pub xes: i32,
