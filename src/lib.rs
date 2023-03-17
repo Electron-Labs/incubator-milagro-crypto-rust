@@ -9,7 +9,7 @@ pub mod aes;
 #[path = "arch/arch32.rs"]
 pub mod arch;
 #[cfg(target_pointer_width = "64")]
-#[path = "arch/arch64.rs"]
+#[path = "arch/arch32.rs"]
 pub mod arch;
 pub mod errors;
 pub mod gcm;
@@ -99,7 +99,7 @@ pub mod bls381 {
     #[path = "roms/rom_bls381_32.rs"]
     pub mod rom;
     #[cfg(target_pointer_width = "64")]
-    #[path = "roms/rom_bls381_64.rs"]
+    #[path = "roms/rom_bls381_32.rs"]
     pub mod rom;
 
     pub mod big;

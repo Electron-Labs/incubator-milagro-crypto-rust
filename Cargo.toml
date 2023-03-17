@@ -7,6 +7,9 @@ license = "Apache-2.0"
 repository = "https://github.com/apache/incubator-milagro-crypto-rust"
 edition = "2018"
 
+[dependencies]
+borsh = "0.9.3"
+
 [dev-dependencies]
 hex = "0.3"
 serde = "1.0"

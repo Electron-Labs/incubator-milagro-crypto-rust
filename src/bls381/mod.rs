@@ -32,9 +32,9 @@ mod core;
 mod iso;
 
 #[cfg(target_pointer_width = "64")]
-mod iso_constants_x64;
+mod iso_constants_x32;
 #[cfg(target_pointer_width = "64")]
-pub(crate) use iso_constants_x64::{
+pub(crate) use iso_constants_x32::{
     ISO11_XDEN, ISO11_XNUM, ISO11_YDEN, ISO11_YNUM, ISO3_XDEN, ISO3_XNUM, ISO3_YDEN, ISO3_YNUM,
 };
 

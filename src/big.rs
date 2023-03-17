@@ -35,7 +35,9 @@ pub const HMASK: Chunk = (1 << HBITS) - 1;
 pub const NEXCESS: isize = 1 << (arch::CHUNK - BASEBITS - 1);
 pub const BIGBITS: usize = MODBYTES * 8;
 
-#[derive(Clone)]
+use borsh::{BorshDeserialize, BorshSerialize};
+
+#[derive(BorshDeserialize, BorshSerialize, Clone)]
 pub struct Big {
     pub w: [Chunk; NLEN],
 }
